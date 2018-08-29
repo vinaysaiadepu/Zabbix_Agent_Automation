@@ -1,0 +1,12 @@
+---
+- hosts: newservers
+  sudo: yes
+  tasks:
+    - name: mv agent file to backup
+      command: mv /etc/zabbix/zabbix_agentd.conf /etc/zabbix/zabbix_agentd.conf.old
+      
+    - name: now copy the agent template to all the host servers
+      copy: src=/etc/ansible/agenttemplate/zabbix_agentd.conf dest=/etc/zabbix/
+     
+    - name: restart agent once again
+      service: name=zabbix-agent state=restarted
