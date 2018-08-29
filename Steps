@@ -1,0 +1,10 @@
+sudo chmod 777 agenttemplate/
+
+
+ansible-playbook template_copy.yml --syntax-check
+ansible-playbook template_copy.yml --ask-pass
+
+ansible-playbook zabbix_agent.yml --syntax-check
+ansible-playbook zabbix_agent.yml --ask-pass
+
+
