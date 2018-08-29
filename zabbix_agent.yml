@@ -4,7 +4,7 @@
   tasks: 
     - name: copy release rpm file to hosts
       copy: src=/tmp/zabbix_rpm/zabbix-release-3.4-1.el6.noarch.rpm dest=/etc/zabbix/
-    - name= copy actual rpm file to hosts
+    - name: copy actual rpm file to hosts
       copy: src=/tmp/zabbix_rpm/zabbix-agent-3.4.1-1.el7.x86_64.rpm dest=/etc/zabbix/
       
     - name: install release rpm file 
