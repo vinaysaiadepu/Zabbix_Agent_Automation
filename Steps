@@ -1,4 +1,4 @@
-sudo chmod 777 agenttemplate/
+
 
 
 ansible-playbook template_copy.yml --syntax-check
