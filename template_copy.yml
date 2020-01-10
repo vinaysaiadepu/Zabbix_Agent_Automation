@@ -8,5 +8,5 @@
     - name: now copy the agent template to all the host servers
       copy: src=/etc/ansible/agenttemplate/zabbix_agentd.conf dest=/etc/zabbix/
      
-    - name: restart agent once again
+    - name: restart agent now to take effect
       service: name=zabbix-agent state=restarted
